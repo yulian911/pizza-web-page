@@ -10,12 +10,18 @@ import Home from './pages/Home';
 // import Cart from './pages/Cart';
 // import FullPizza from './pages/FullPizza';
 import MainLayout from './layouts/MainLayout';
+// biblioteka podobna do lazy ale tez spólpracuje z serverem 
+import Loadable from 'react-loadable';
 
-
-const Cart =React.lazy(() => import(/*webpackChunkName:"Cart"*/'./pages/Cart'))
+// const Cart =React.lazy(() => import(/*webpackChunkName:"Cart"*/'./pages/Cart'))
 const FullPizza =React.lazy(() => import(/*webpackChunkName:"FullPizza"*/'./pages/FullPizza'))
 const  NotFound =React.lazy(() => import(/*webpackChunkName:"NotFound"*/'./pages/NotFound'))
 
+
+const Cart = Loadable({
+  loader: () => import(/*webpackChunkName:"Cart"*/'./pages/Cart'),
+  loading: () =>  <div>Loading</div>
+});
 
 
 function App() {
