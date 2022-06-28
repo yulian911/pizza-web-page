@@ -79,9 +79,9 @@ export const sortList:SortItem[] = [
         <b >Sortowanie po:</b>
         <span onClick={()=>setShow(true)}>{value?.name}</span>
       </div>
-      
-      <div className="sort__popup" >
       {show &&
+      <div className="sort__popup" >
+     
         <ul>
           {sortList.map((item,i)=>{
             return(
@@ -95,9 +95,9 @@ export const sortList:SortItem[] = [
             )
           })}
         </ul> 
-      }
-      </div>
       
+      </div>
+      }
     </div>
     )
   })

@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { FC, useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 type Data ={
   id:string,
@@ -48,6 +48,11 @@ const FullPizza:FC = () => {
        <h4>
         {datas?.price} PLN
        </h4>
+       <Link to='/'>
+        <div className="button button--outline button--add" >
+              <span >Cofnij</span>
+        </div>
+       </Link>
     </div>
   )
 }

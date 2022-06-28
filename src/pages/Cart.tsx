@@ -1,4 +1,4 @@
-import React from 'react'
+import React  from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import CartEmpty from '../components/CartEmpty'
 import CartItem from '../components/CartItem'
@@ -34,6 +34,9 @@ const Cart = () => {
   }
   return (
     <div className="content">
+
+
+
       <div className="container container--cart">
         <div className="cart">
           <div className="cart__top">
